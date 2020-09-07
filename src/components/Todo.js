@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-const Todo = ({ text, todos, todo, setTodos }) => {
+const Todo = ({ text, todo, todos, setTodos }) => {
   const deleteHandler = () => {
-    setTodos(todos.filter(el => el.id !== todo.id))
+    setTodos(todos.filter(item => item.id !== todo.id))
   }
   const completeHandler = () => {
     setTodos(todos.map(item => {
@@ -11,7 +11,7 @@ const Todo = ({ text, todos, todo, setTodos }) => {
           ...item, completed: !item.completed
         }
       }
-      return item;
+      return item
     }))
   }
   return (
@@ -24,7 +24,7 @@ const Todo = ({ text, todos, todo, setTodos }) => {
         <i className="fas fa-trash"></i>
       </button>
     </div>
-  );
+  )
 }
 
-export default Todo;
+export default Todo
